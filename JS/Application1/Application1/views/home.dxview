@@ -1,0 +1,36 @@
+<div data-options="dxView : { name: 'home', title: 'Home' } ">
+    <div class="home-view" data-options="dxContent : { targetPlaceholder: 'content' } ">
+        <div style="height: 300px;" data-bind="dxChart: {
+            dataSource: dataSource,
+            title: {
+                'text': 'Continental Population Shift (in millions)'
+            },
+            tooltip: {
+                'enabled': true,
+                'percentPrecision': 2
+            },
+            commonSeriesSettings: {
+                'type': 'fullstackedarea',
+                'label': {
+                    'visible': true, 
+                    'connector': {'visible': true }
+                },
+                'hoverMode': 'none',
+                'point': { 'visible': false },
+                'border': { 'width': 1 }
+            },
+            series: [
+                { 'name': 'Africa', 'axis': 'default', 'argumentField': 'year', 'valueField': 'Africa', 'point': { 'symbol': 'circle' } },
+                { 'point': { 'symbol': 'circle' }, 'name': 'Americas', 'axis': 'default', 'argumentField': 'year', 'valueField': 'Americas' },
+                { 'point': { 'symbol': 'circle' }, 'name': 'Asia', 'axis': 'default', 'argumentField': 'year', 'valueField': 'Asia' },
+                { 'point': { 'symbol': 'circle' }, 'name': 'Europe', 'axis': 'default', 'argumentField': 'year', 'valueField': 'Europe' },
+                { 'point': { 'symbol': 'circle' }, 'name': 'Oceania', 'axis': 'default', 'argumentField': 'year', 'valueField': 'Oceania' }
+            ],
+            valueAxis: [{ 'name': 'default' }],
+            argumentAxis: { 'grid': { 'visible': true } },
+            legend: { 'verticalAlignment': 'bottom', 'horizontalAlignment': 'center', 'hoverMode': 'allSeriesPoints' },
+            commonPaneSettings: { 'border': { 'visible': true } }
+        }">
+        </div>
+    </div>
+</div>
